@@ -44,6 +44,10 @@ img {
     max-width: 100%;
 }
 
+.button-up-hide {
+    display: none;
+}
+
 .mobile-break {
     display: none;
 }
@@ -267,6 +271,46 @@ img {
 
 .footer__menu {
     width: 85%;
+}
+
+.buttonUp {
+    background: #edcaa6;
+    position: fixed;
+    width: 6rem;
+    height: 6rem;
+    bottom: 30px;
+    right: 20px;
+    border-radius: 30px;
+    opacity: 0.5;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+    cursor: pointer;
+}
+
+.buttonUp:hover {
+    opacity: 1;
+}
+
+.buttonUp::after, .buttonUp::before {
+    content: "";
+    display: block;
+    height: .5rem;
+    width: 2rem;
+    background: #821414;
+    border-radius: 30px;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+}
+
+.buttonUp::after {
+    -webkit-transform: translate(-20%, -50%) rotate(45deg);
+    transform: translate(-20%, -50%) rotate(45deg);
+}
+
+.buttonUp::before {
+    -webkit-transform: translate(-80%, -50%) rotate(-45deg);
+    transform: translate(-80%, -50%) rotate(-45deg);
 }
 
 .header {
@@ -810,5 +854,29 @@ input.order-call__checkbox:checked + .custom__checkbox:before {
 
     .mobile-break {
         display: block;
+    }
+}
+
+/* 1792x828px at 326ppi iPhone 11*/
+@media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) {
+    .full-height-iphone {
+        height: 100vh;
+        margin: 0;
+    }
+}
+
+/* 2436x1125px at 458ppi iPhone 11 pro*/
+@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+    .full-height-iphone {
+        height: 100vh;
+        margin: 0;
+    }
+}
+
+/* 2688x1242px at 458ppi iPhone 11 Pro Max */
+@media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) {
+    .full-height-iphone {
+        height: 100vh;
+        margin: 0;
     }
 }
